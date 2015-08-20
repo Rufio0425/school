@@ -15,10 +15,15 @@ div a{
 }
 
 div div {
-	background-color:gray;
+	background-color:#444444;
 	padding:.4em;
 }
 
 .business {
 	text-align:left;
+}
+
+.header {
+	border-top:1px solid black;
+	border-bottom:1px solid black;
 }

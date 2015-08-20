@@ -1,0 +1,40 @@
+<!-- This is displaying block vs. inline elements
+Inline = span a&b
+Block = div tags
+
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<style>
+	main {
+		width: 200px;
+		background-color: yellow;
+		border: solid black 1px;
+	}
+
+	div {
+		border: dashed green 1px;
+	}
+
+	span {
+		background-color: pink;
+	}
+
+</style>
+
+<body>
+	<main>
+		<div>here's some text</div>
+		<div>
+			<span class="a">span a</span>
+			<span class="b">span b</span>
+		</div>
+	</main>
+</body>
+</html>
