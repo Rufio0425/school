@@ -1,0 +1,25 @@
+/* media quere example, run local php server*/
+
+.one {
+	height:100px;
+	width:100px;
+	font:10pt;
+}
+
+@media screen and (min-width: 600px){
+	.one {font-size: 30pt;}
+	} 
+}
+
+.two {
+	height:100px;
+	width:100px;
+	font:2em;
+}
+ls
+
+.three {
+	height:100px;
+	width:100px;
+	font:4em;
+}

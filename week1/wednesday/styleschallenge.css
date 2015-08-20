@@ -1,0 +1,17 @@
+body {
+	font-size:16pt;
+	
+
+}
+
+p {
+	padding-top: 2em;
+}
+
+.best {
+	font-size: 2em;
+}
+
+ul p{
+	border: 1px solid green;
+}

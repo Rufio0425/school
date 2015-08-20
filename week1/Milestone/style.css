@@ -1,0 +1,20 @@
+body {
+	background-image: url('background.png');
+}
+
+div{
+	background-color:white;
+
+}
+
+div a{
+	color:white;
+	font-size:16px
+
+
+}
+
+div div {
+	background-color:gray;
+	padding:.4em;
+}
