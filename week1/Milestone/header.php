@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="style.css">
 
 <div>
-	<p>Business Site</p>
+	<p class="business">Business Site</p>
 	<div>
 		<a class="link"href="index.php">Home</a>
 		<a class="link"href="contact.php">Contact</a>
