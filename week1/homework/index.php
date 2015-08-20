@@ -18,7 +18,7 @@
 	?>
 
 	<?php 
-		$welcome = "Hello there and welcome to Dota, ";
+		$welcome = "hello there and welcome to Dota, ";
 		$welcome .= "Sean";
 
 		echo $welcome;
