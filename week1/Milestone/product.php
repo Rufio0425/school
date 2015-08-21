@@ -16,7 +16,6 @@ if(isset($_GET['id'])) {
 	}
 } 
 
-
 ?> 
 
 <!DOCTYPE html>
@@ -27,8 +26,10 @@ if(isset($_GET['id'])) {
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<?php require_once('header.php'); ?>
+	<?php require('header.php'); ?>
 
 	<h1>You chose product <?php echo $output;?></h1>
+
+	<?php require('footer.php'); ?>
 </body>
 </html>

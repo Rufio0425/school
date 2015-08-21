@@ -2,8 +2,8 @@
 
 $e_dir ='up';
 $e_floor = 5;
-$p_dir = 'down';
-$p_floor = 4;
+$p_dir = 'up';
+$p_floor = 6;
 
 if($e_dir != $p_dir){
 	$msg = 'dont pick me up';

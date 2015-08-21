@@ -6,10 +6,12 @@
 	<title>Contact</title>
 </head>
 <body>
-	<?php require_once('header.php'); ?>
+	<?php require('header.php'); ?>
 
 	<h1>Contact</h1>
 	<p>Phone (480)555-5555</p>
 	<p>Email: Blah@blah.com</p>
+
+	<?php require('footer.php'); ?>
 </body>
 </html>

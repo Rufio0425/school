@@ -6,10 +6,12 @@
 	<title>Home</title>
 </head>
 <body>
-	<?php require_once('header.php'); ?>
+	<?php require('header.php'); ?>
 
 	<h1>Welcome to our shopping cart</h1>
 
-	<p>Do you want to see our list of <a href = "browse.php"> products</p>
+	<p>Do you want to see our list of <a href = "browse.php"> products</a></p>
+
+	<?php require('footer.php'); ?>
 </body>
 </html>
