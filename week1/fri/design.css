@@ -1,0 +1,91 @@
+div{
+	background-color:black;
+}
+
+header{
+	background-color:teal;
+}
+
+header > a{
+	background-color:red;
+}
+
+header > nav{
+	background-color:pink;
+}
+
+main{
+	background-color:#57604f;
+}
+
+aside{
+	background-color:orange;
+}
+
+nav{
+	background-color:#778eff;
+}
+
+header > nav a:first-child{
+	background-color:orange;
+}
+
+header > nav a:nth-child(2){
+	background-color:indigo;
+}
+
+header > nav a:last-child{
+	background-color:yellow;
+}
+
+aside nav a:first-child{
+	background-color:gold;
+}
+
+aside nav a:nth-child(2){
+	background-color:green;
+}
+
+aside nav a:last-child{
+	background-color:#00ffed;
+}
+
+main article:nth-child(2){
+	background-color:#77f8ff;
+}
+
+main article:nth-child(2) h1{
+	background-color:purple;
+}
+
+main article:nth-child(2) p{
+	background-color:#0090ff;
+}
+
+main article:nth-child(2) a{
+	background-color:magenta;
+}
+
+main article:last-child{
+	background-color:#849b73;
+}
+
+main article:last-child h1{
+	background-color:#f9b26b;
+}
+
+main article:last-child p{
+	background-color:#77c2ff;
+}
+
+main article:last-child a{
+	background-color:#fcff77;
+}
+
+footer{
+	background-color:#b977ff;
+}
+
+footer p{
+	background-color:#777cff;
+}

@@ -1,5 +1,7 @@
 body {
+	font-family: Lato;
 	background-image: url('background.png');
+	background-size:cover;
 }
 
 div{
@@ -20,6 +22,7 @@ div div {
 }
 
 .business {
+	font-family:Lobster;
 	text-align:left;
 	margin-top:.1em;
 	margin-bottom:.1em;

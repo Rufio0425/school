@@ -1,18 +1,18 @@
 <?php
 
 $id;
-
+$output = "Invaild";
 if(isset($_GET['id'])) {
 	$id = $_GET['id'];
-
+	$output = 'You chose product ';
 	if($id == 1) {
-		$output = 'Mac';
+		$output .= 'Mac';
 	} elseif($id == 2){
-		$output = 'Ubuntu';
+		$output .= 'Ubuntu';
 	} elseif($id == 3){
-		$output = 'Windows';
+		$output .= 'Windows';
 	} else {
-		$output = 'Invalid';
+		$output .= 'Invalid';
 	}
 } 
 
@@ -28,7 +28,7 @@ if(isset($_GET['id'])) {
 <body>
 	<?php require('header.php'); ?>
 
-	<h1>You chose product <?php echo $output;?></h1>
+	<h1><?php echo $output;?></h1>
 
 	<?php require('footer.php'); ?>
 </body>
