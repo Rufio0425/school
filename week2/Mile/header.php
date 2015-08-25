@@ -1,5 +1,9 @@
 <link rel="stylesheet" href="style.css">
 
+<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+
 <div class='header'>
 	<p class="business">Business Site</p>
 	<div>
