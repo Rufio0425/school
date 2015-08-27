@@ -9,10 +9,12 @@
 <body>
 	<?php require('header.php'); ?>
 
-	<h1>Welcome to our shopping cart</h1>
+	<div>
 
-	<p>Do you want to see our list of <a href = "browse.php"> products</a></p>
+		<h1>Welcome to our shopping cart</h1>
+		<p>Do you want to see our list of <a href = "browse.php"> products</a></p>
 
+	</div>
 	<?php require('footer.php'); ?>
 </body>
 </html>

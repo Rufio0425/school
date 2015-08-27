@@ -3,17 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
-	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-	<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 	<title>Browse</title>
 </head>
 <body>
-	<?php require('header.php'); ?>
+	<?php require('header.php'); require('product.php') ?>
 
-	<h1>Browse Products</h1>
-	<a class="link" href="product.php?id=1">Macbook<br></a>
-	<a class="link" href="product.php?id=2">Ubuntu<br></a>
-	<a class="link" href="product.php?id=3">Windows<br></a>
+	<form action="" method="POST">
+		select a product: <select name="prod_id"><?= $options ?></select>
+		<button>Go</button>
+
+		<label>Number of products:
+			<select name="amount">
+				<option value="none">-</option>
+				<option value="1">1</option>
+				<option value="2">2</option>				
+			</select>
+		</label>
+
+		<input type="submit">
+	</form>
+	
+
 
 	<?php require('footer.php'); ?>
 </body>

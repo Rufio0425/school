@@ -1,5 +1,6 @@
 body {
 	font-family: Lato;
+	color:#629D00;
 	background-image: url('background.jpg');
 }
 
@@ -9,7 +10,7 @@ div{
 }
 
 div a{
-	color:white;
+	color:black;
 	font-size:16px
 
 }
@@ -36,8 +37,6 @@ div div {
 }
 
 footer {
-	border-top:1px solid black;
-	border-bottom:1px solid black;
-	padding:1em;
-	background-color:white;
+	color:white;
+	font-weight:700;
 }

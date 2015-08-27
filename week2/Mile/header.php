@@ -5,7 +5,7 @@
 <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
 
 <div class='header'>
-	<p class="business">Business Site</p>
+	<a class="business" href="index.php">Business Site</p>
 	<div>
 		<a class="link" href="index.php">Home</a> |
 		<a class="link" href="contact.php">Contact</a> |
