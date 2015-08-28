@@ -1,3 +1,17 @@
+<?php
+require('product.php');
+
+$options = '';
+
+foreach($products as $key => $product){
+	$options .= '<option value="' . $key . '">' .$product . '</option>';
+} 
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,25 +20,14 @@
 	<title>Browse</title>
 </head>
 <body>
-	<?php require('header.php'); require('product.php') ?>
+	<?php require('header.php'); ?>
 
-	<form action="" method="POST">
+	<form action="view.php" method="GET">
 		select a product: <select name="prod_id"><?= $options ?></select>
-		<button>Go</button>
-
-		<label>Number of products:
-			<select name="amount">
-				<option value="none">-</option>
-				<option value="1">1</option>
-				<option value="2">2</option>				
-			</select>
-		</label>
-
+		Quantity:  <input type="number" name="quantity" value="10" required>
 		<input type="submit">
 	</form>
 	
-
-
 	<?php require('footer.php'); ?>
 </body>
 </html>

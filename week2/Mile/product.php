@@ -16,13 +16,7 @@
 // 	}
 // } 
 
-$products = ['none' => 'select', 'first' => 'Macbook', 'second' => 'Ubuntu', 'third' => 'Windows'];
-
-$options = '';
-
-foreach($products as $key => $product){
-	$options .= '<option value="' . $key . '">' . $product . '</option>';
-}
+$products = ['first' => 'Macbook', 'second' => 'Ubuntu', 'third' => 'Windows'];
 
 
 
