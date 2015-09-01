@@ -15,19 +15,20 @@ foreach($products as $key => $product){
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="style.css">
+	<?php require('cssincludes.php');?>
 	<title>Browse</title>
 </head>
 <body>
 	<?php require('header.php'); ?>
-
-	<form action="view.php" method="GET">
-		select a product: <select name="prod_id"><?= $options ?></select>
-		Quantity:  <input type="number" name="quantity" value="10" required>
-		<input type="submit">
-	</form>
 	
+	<div class="welcome">
+		<h1>Browse Products</h1>
+		<form action="view.php" method="GET">
+			Select a product: <select name="prod_id"><?= $options ?></select>
+			Quantity:  <input type="number" name="quantity" min="1" max="50" value="number" required>
+			<input class='button' type="submit">
+		</form>
+	</div>
 	<?php require('footer.php'); ?>
 </body>
 </html>
