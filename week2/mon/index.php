@@ -30,9 +30,7 @@ function character($test){
 
 		if(is_numeric($firstTwo)){
 			return 'PASS';
-		}
-
-		else {
+		} else {
 			return 'FAIL';
 		}
 	} else {
@@ -41,7 +39,6 @@ function character($test){
 
 $test = "hello there"
 echo ()
-
 
 
 

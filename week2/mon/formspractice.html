@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Forms</title>
+</head>
+<body>
+	<form action="" method="POST">
+		First Name:
+		<input type="text" name="firstname">
+		<br>
+		Last Name:
+		<input type="text" name="lastname">
+		<br>
+		City:
+		<input type="text" name="city" value="New York">
+		<br>
+
+		<label>
+			Male:
+			<input type="radio" name="sex" value="male">
+			<br>
+		</label>
+		<label>
+			Female:
+			<input type="radio" name="sex" value="female">
+			<br>
+		</label>
+
+		<input type="checkbox" name="color" value="red">Red <br>
+		<input type="checkbox" name="color" value="green">Green <br>
+		<input type="checkbox" name="color" value="blue">Blue <br>
+
+		<select name="move">
+			<option value="arizona">Arizona</option>
+			<option value="cali">California</option>
+			<option value="utah">Utah</option>
+		</select>
+		<br>
+		<label>
+			Make A Username:
+			<input type="text" name="user"> <br>
+		</label>
+		<label>
+			Make A Password:
+			<input type="disabled" name="psw"> <br>
+			Select your favorite color:
+			<input type="color" name="favcolor">
+		</label>
+
+		Select a Number:
+		<input type="number" name="amount" min="1" max="2000">
+		<button value="submit" onclick="alert('Thank you for your info!')">Submit</button> <br>
+		<input type="reset"> <br>
+
+	</form>
+</body>
+</html>
