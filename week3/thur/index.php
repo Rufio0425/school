@@ -18,7 +18,7 @@ foreach ($states as $key => $state){
 	<title>Valid Form</title>
 </head>
 <body>
-	<form action="view.php" method="GET">
+	<form action="view.php" method="POST">
 		Username:
 			<input type="text" name="user" required>
 			<br>

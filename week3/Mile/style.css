@@ -1,0 +1,26 @@
+.hero{
+	background-color: grey;
+}
+
+.hero div{
+	background-color: orange;
+	height:200px;
+
+}
+
+.primary-container{
+	background-color: red;
+	height:100px;
+}
+
+.primary-container div{
+	background-color: pink;
+	height:50px;
+	width:50px;
+	display:inline-block;
+}
+
+.services > div{
+	background-color: #fff;
+	padding:10px;
+}

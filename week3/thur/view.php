@@ -1,33 +1,25 @@
 <?php
 
 $login = ["Rufio0425" => "Slugworth45", "Sean" => "thisismine123", "Friend" => "haveagood12"];
-$msg = "";
 $user = "";
 $pass = "";
 $sex = "";
 $location = "";
-if(isset($_GET['user'])){
-	$user = $_GET['user'];
-	// echo "$user<br>";
-} else{
-	echo "Username is not set<br>";
+$msg = "";
+if(isset($_POST['user'])){
+	$user = $_POST['user'];
+} 
+
+if(isset($_POST['pass'])){
+	$pass = $_POST['pass'];
+} 
+
+if(isset($_POST['sex'])){
+	$sex = $_POST['sex'];
 }
 
-if(isset($_GET['pass'])){
-	$pass = $_GET['pass'];
-	
-} else{
-	echo "Password is not set<br>";
-}
-
-if(isset($_GET['sex'])){
-	$sex = $_GET['sex'];
-	// echo "$sex<br>";
-}
-
-if(isset($_GET['location'])){
-	$location = $_GET['location'];
-	// echo "$location<br>";
+if(isset($_POST['location'])){
+	$location = $_POST['location'];
 }
 
 if(array_key_exists($user, $login)){
@@ -48,11 +40,6 @@ if(strlen($pass < 10)){
 	$msg = "password needs to be at least 10 characters";
 
 }
-
-
-
-
-
 
 ?>
 
