@@ -11,15 +11,48 @@
 		flex-direction:column;
 	}
 
+	main{
+		width:60em;
+		margin-left:auto;
+		margin-right:auto;
+	}
+
 	header{
 		background-color:#FFA600;
+		height:100px;
+		position: relative;
+	}
+
+	a{
+		text-decoration:none;
+		color:white;
+	}
+
+	header > a{
+		background-color:#FF0000;
+	}
+
+	header > div{
+		float:right;
+		display:block;
+		margin-top:10px;
 	}
 
 	nav{
+		
 		background-color:#008100;
+		display:flex;
+		position: absolute;
+		width:100%;
+		bottom:0;
+	}
+
+	nav > a{
+		flex:1;
 	}
 
 	.hero{
+		color:#FFFFFF;
 		background-color: #00AABB;
 		flex:1;
 	}
@@ -29,8 +62,18 @@
 		flex:3;
 	}
 
+	.new{
+		background-color:#84D4DD;
+		height:100px;
+		position:relative;
+	}
+
 	.banner{
 		background-color:#FF00FF;
+		position:absolute;
+		bottom:0;
+		width:100%;
+		text-align:center;
 	}
 
 	</style>
@@ -42,8 +85,10 @@
 		<main>
 			<header>
 				<a href="">Puppy Love</a>
-				<input type="text">
-				<button>Search</button>
+				<div>
+					<input type="text">
+					<button>Search</button>
+				</div>
 				<nav>
 					<a href="">HOME</a>
 					<a href="">SERVICES</a>
@@ -56,14 +101,20 @@
 				</nav>
 			</header>
 			
-			<div class="banner">
-				Great People, Better Dogs
+			<div class="new">
+				<div class="banner">
+					<div class="title">Great People, Better Dogs</div>
+					<div class="intro">Welcome to the best site on the internet. We really hope you buy our products because we really love to make money!</div>
+				</div>
 			</div>
 		</main>
 	</div>
 
 	<div class="pannel content">
-		b
+		<main>
+			<div class="steps"></div>
+			<div class="profiles"></div>
+		</main>
 	</div>
 </body>
 </html>

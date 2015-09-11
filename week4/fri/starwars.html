@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+	<script>
+	$('button').click(getStarWarsData());
+
+	function getStarWarsData() {
+		var url = 'http://swapi.co/api/vehicles';
+
+		$.get(url, function(){
+			console.log(getStarWarsData);
+		})
+	}
+	</script>
+</head>
+<body>
+	<h1>Star Wars Vehicles</h1>
+	<button>Get the Data</button>
+	<ul>
+		
+
+
+
+
+	</ul>
+</body>
+</html>
