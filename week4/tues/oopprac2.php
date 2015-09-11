@@ -83,7 +83,6 @@
 
 class Animal {
 	public $foodType;
-
 	public function __construct($type) {
 		$this->foodType = $type;
 	} 
@@ -94,34 +93,40 @@ class Zookeeper {
 	private $veggies = 10;
 
 	public function feed($animal){
-		if($animal->foodType = "carnivore"){
+		if($animal->foodType == 'carnivore'){
 			$this->meat -=2;
-		} else if($animal->foodType = "herbivore"){
+		} elseif($animal->foodType == 'herbivore'){
 			$this->veggies -=2;
-		} else if($animal->foodType = "omnivore"){
+		} elseif($animal->foodType == 'omnivore'){
 			$this->meat--;
 			$this->veggies--;
 		} else{
-			die ('Invalid animal type');
+			die ("Invalid animal type: " . $animal->foodType);
 		}
 	}
 
 	public function getFoodStatus(){
-		return 'There are ' . $this->meat . ' units of meat ' . $this->veggies . ' units of veggies left<br>';
+		return "meat: " . $this->meat . "veggies: " . $this->veggies;
 	}
 }
 
-$paco = new Zookeeper;
 
-$lion = new Animal("carnivore");
-$sloth = new Animal("herbivore");
-$bear = new Animal("omnivore");
+$lion = new Animal('carnivore');
+$sloth = new Animal('herbivore');
+$bear = new Animal('omnivore');
+$lorax = new Animal('candivore');
 
+$zookeeper = new Zookeeper;
+echo $zookeeper->getFoodStatus(), "<br>";
 
-$paco->feed($lion);
-$paco->feed($bear);
+$zookeeper->feed($lion);
+echo $zookeeper->getFoodStatus(), "<br>";
 
-echo $paco->getFoodStatus();
+$zookeeper->feed($sloth);
+echo $zookeeper->getFoodStatus(), "<br>";
+
+$zookeeper->feed($bear);
+echo $zookeeper->getFoodStatus(), "<br>";
 
 
 ?>
