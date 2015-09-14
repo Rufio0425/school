@@ -2,83 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Lobster|Open+Sans' rel='stylesheet' type='text/css'>
 	<title>Puppy Love</title>
-
-	<style>
-	
-	body{
-		display:flex;
-		flex-direction:column;
-	}
-
-	main{
-		width:60em;
-		margin-left:auto;
-		margin-right:auto;
-	}
-
-	header{
-		background-color:#FFA600;
-		height:100px;
-		position: relative;
-	}
-
-	a{
-		text-decoration:none;
-		color:white;
-	}
-
-	header > a{
-		background-color:#FF0000;
-	}
-
-	header > div{
-		float:right;
-		display:block;
-		margin-top:10px;
-	}
-
-	nav{
-		
-		background-color:#008100;
-		display:flex;
-		position: absolute;
-		width:100%;
-		bottom:0;
-	}
-
-	nav > a{
-		flex:1;
-	}
-
-	.hero{
-		color:#FFFFFF;
-		background-color: #00AABB;
-		flex:1;
-	}
-
-	.content{
-		background-color: #810082;
-		flex:3;
-	}
-
-	.new{
-		background-color:#84D4DD;
-		height:100px;
-		position:relative;
-	}
-
-	.banner{
-		background-color:#FF00FF;
-		position:absolute;
-		bottom:0;
-		width:100%;
-		text-align:center;
-	}
-
-	</style>
-
-
 </head>
 <body>
 	<div class="pannel hero">
@@ -103,7 +29,7 @@
 			
 			<div class="new">
 				<div class="banner">
-					<div class="title">Great People, Better Dogs</div>
+					<div class="title"><b>Great</b> People, <b>Better</b> Dogs</div>
 					<div class="intro">Welcome to the best site on the internet. We really hope you buy our products because we really love to make money!</div>
 				</div>
 			</div>
@@ -112,8 +38,79 @@
 
 	<div class="pannel content">
 		<main>
-			<div class="steps"></div>
-			<div class="profiles"></div>
+			<div class="steps">
+				<div class="tile">
+					<div class="title">Raise A litter</div>
+					<div class="words">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
+					<div>
+						<button>Get Help</button>
+					</div>
+				</div>
+				<div class="tile">
+					<div class="title">Feed 'em right</div>
+					<div class="words">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
+					<div>
+						<button>Get Food</button>
+					</div>
+				</div>
+				<div class="tile">
+					<div class="title">Sell your pups</div>
+					<div class="words">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</div>
+					<div>
+						<button>Sell dog to China</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="media">
+				<aside>
+					<div class="labels">
+						<div class="img"><img src="images/dog1.png"></div>
+						<div class="text"><span>Ralf</span>This old mutt likes to roll in the dirt</div>
+					</div>
+					<div class="labels">
+						<div class="img"><img src="images/dog2.png"></div>
+						<div class="text"><span>Max</span>If there was ever a young pup that liked grass, it's Max</div>
+					</div>
+					<div class="labels">
+						<div class="img"><img src="images/dog3.png"></div>
+						<div class="text"><span>Rudy</span>Young and Fierce, that's all I have to say</div>
+					</div>
+				</aside>
+
+				<div class="profiles">
+					<div>
+						<div><img src="images/dog1.png"></div>
+						<div><span>Ralf</span></div>
+						<div class="bottom">This old mutt likes to roll in the dirt</div>
+					</div>
+					<div>
+						<div><img src="images/dog2.png"></div>
+						<div><span>Max</span></div>
+						<div class="bottom">If there was ever a young pup that liked grass, it's Max</div>
+					</div>
+					<div>
+						<div><img src="images/dog3.png"></div>
+						<div><span>Rudy</span></div>
+						<div class="bottom">Young and Fierce, that's all I have to say</div>
+					</div>
+					<div>
+						<div><img src="images/dog2.png"></div>
+						<div><span>Max</span></div>
+						<div class="bottom">If there was ever a young pup that liked grass, it's Max</div>
+					</div>
+					<div>
+						<div><img src="images/dog3.png"></div>
+						<div><span>Rudy</span></div>
+						<div class="bottom">Young and Fierce, that's all I have to say</div>
+					</div>
+					<div>
+						<div><img src="images/dog1.png"></div>
+						<div><span>Ralf</span></div>
+						<div class="bottom">This old mutt likes to roll in the dirt</div>
+					</div>
+				</div>
+			</div>
 		</main>
 	</div>
 </body>
