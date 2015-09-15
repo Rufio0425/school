@@ -13,13 +13,13 @@ body{
 
 	header{
 		background-color:#FFA600;
-		height:100px;
+		height:146px;
 		position: relative;
 		font-weight:600;
 	}
 
-	.pannel.hero main{
-		height:400px;
+	.pannel.hero{
+		height:440px;
 	}
 
 	a{
@@ -28,15 +28,26 @@ body{
 
 	header > a{
 		position:relative;
-		top:5px;
-		left:5px;
+		top:3px;
+		left:3px;
 		background-color:#FF0000;
 	}
 
 	header > div{
 		float:right;
 		display:block;
-		margin-top:10px;
+		margin-top:12px;
+		background-color: blue;
+	}
+
+	header input{
+		height:19px;
+	}
+
+	header button{
+		float:right;
+		font-size:12pt;
+		color:white;
 	}
 
 	nav{
@@ -68,7 +79,7 @@ body{
 
 	.new{
 		background-color:#84D4DD;
-		height:300px;
+		height:294px;
 		position:relative;
 	}
 
@@ -77,20 +88,21 @@ body{
 	}
 	
 	.banner .title{
-		font-size:24pt;
-		margin:10px;
+		font-size:30pt;
+		padding-bottom:8px;
 	}
 
 	.banner .intro{
-		margin:10px;
+		padding-top:8px;
 	}
 
 	.banner{
 		background-color:#FF00FF;
 		position:absolute;
-		bottom:20px;
+		bottom:28px;
 		width:100%;
 		text-align:center;
+		padding-bottom:14px;
 	}
 	
 	.steps{
@@ -98,36 +110,45 @@ body{
 		display:flex;
 	}
 
-	.steps button{
+	.tile:first-child{
+		margin:7px 7px 7px 14px;
 	}
-	
+
+	.tile:nth-child(2){
+		margin:7px 7px 7px 7px;
+	}
+
+	.tile:last-child{
+		margin:7px 14px 7px 7px;
+	}
+
 	.tile{
-		margin:10px;
 		background-color: #00FF00;
 		display:inline-block;
 		flex:1;
 		text-align:center;
-		transform:translateY(-20px);
+		transform:translateY(-22px);
 	}
 
 	.tile .title{
 		font-weight:900;
-		margin:10px;
+		margin:15px;
 	}
 
 	.tile .words{
-		margin:10px;
+		margin:15px;
 	}
 
 	.media{
 		display:flex;
 		flex-direction:row;
 		background-color: white;
+		transform:translateY(-12px);
 	}
 
 	aside{
 		background-color: #00FF00;
-		flex:1;
+		flex:1.175;
 	}
 
 	.labels {
@@ -137,10 +158,14 @@ body{
 	}
 
 	.labels .img{
-		flex:1;		
+		height:100%;
+	/*	flex:1;	*/
+		height:66px;
+		width:66px;
 	}
 
 	.labels .text{
+		font-size:12pt;
 		flex:3;
 		background-color: yellow;
 	}
@@ -153,11 +178,13 @@ body{
 	.profiles{
 		background-color: #0000FF;
 		flex:1.65;
+		padding:5px;
 	}
 
 	.profiles div {
-		width:170px;
-		margin:10px;
+		width:160px;
+		margin:7px;
+		margin-top:5px;
 		display:inline-block;
 		background-color: yellow;
 		vertical-align:top;
@@ -169,8 +196,8 @@ body{
 	}
 
 	.profiles img{
-		height:170px;
-		width:170px;
+		height:160px;
+		width:160px;
 	}
 
 	span{
