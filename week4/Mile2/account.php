@@ -1,25 +1,35 @@
+
 <?php 
 
 session_start();
-$username = '';
-if(isset($_SESSION['username']) && strlen($_SESSION['username'])) {
-	$username = $_SESSION['username'];
-} else{
-	header('Location: account.php');
-	exit();
+
+$msg = "";
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+
 }
 
+$msg3 = "Hello " . $_SESSION["user"] . " you are logged in";
 
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Sessions</title>
-</head>
-<body>
-	Hello <?= $username ?>. Welcome back to our awesome site!
-	<a href="logout.php">Logout</a>
-</body>
-</html>
+<link rel="stylesheet" href="style.css">
+<link href='https://fonts.googleapis.com/css?family=Indie+Flower|Amatic+SC|Bangers|Fredericka+the+Great|Black+Ops+One' rel='stylesheet' type='text/css'>
+
+<div class="title">Welcome to Forrest Hunter</div>
+
+<div class="account">
+	<div class="greet">
+		<?= $msg3 ?>
+	</div>
+
+	<div class="button">
+		ACCESSING WEAPON INVENTORY
+		<div class="loader">
+		</div>
+	</div>
+
+	<div class="greet">
+		<a href="logout.php" class="logout">Logout</a>
+	</div>
+</div>

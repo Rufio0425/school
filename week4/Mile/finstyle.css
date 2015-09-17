@@ -20,9 +20,15 @@ body{
   Layout
 *****************************************/
 body{
+
 	display:flex;
 	flex-direction:column;
 	margin:0;
+}
+
+forward{
+	height:100%;
+	width:100%;
 }
 
 main{
@@ -53,8 +59,9 @@ header > div{
 }
 
 header input{
-	height: 27px;
-	width: 221px;
+	margin-top:2px;
+	height: 23px;
+	width: 170px;
 }
 
 header button{
@@ -64,18 +71,20 @@ header button{
 }
 
 nav{
-	display:flex;
 	text-align:center;
 	position: absolute;
 	width:100%;
 	bottom:0;
 	padding-top:15px;
 	padding-bottom:15px;
+	margin:0 auto;
 }
 
 nav > a{
-	margin:auto;
+	margin-left:10px;
+	margin-right:10px;
 	text-align:center;
+	padding:10px;
 }
 
 .hero{
@@ -93,6 +102,11 @@ nav > a{
 
 .banner .title{
 	padding-bottom:8px;
+}
+
+.title span{
+	display:inline;
+	font-weight:700;
 }
 
 .banner .intro{
@@ -140,11 +154,14 @@ nav > a{
 
 .tile button{
 	font-size:12pt;
+	margin-bottom:10px;
+	padding:5px;
 }
 
 .media{
 	display:flex;
 	flex-direction:row;
+	transform: translateY(-15px);
 }
 
 aside{
@@ -157,11 +174,13 @@ aside{
 }
 
 .labels .img{
-	height:69px;
-	width:66px;
+	height:80px;
+	width:80px;
 }
 
 .labels .text{
+	margin-left:7px;
+	margin-bottom:5px;
 	font-size:12.7pt;
 	flex:3;
 }
@@ -175,10 +194,11 @@ aside{
 	flex:1.65;
 	padding-left:5px;
 	padding-top:5px;
+
 }
 
 .profiles div{
-	width:155px;
+	max-width:155px;
 	margin:7px;
 	margin-top:5px;
 	display:inline-block;
@@ -193,20 +213,30 @@ aside{
 .profiles img{
 	height:155px;
 	width:155px;
+	margin-bottom:-5px;
 }
 
 span{
 	display:block;
 }
 
+.profiles span{
+	padding:2px 0 2px 5px;
+}
 
+.bottom{
+	padding-top:5px;
+	padding-left:5px;
+	padding-bottom:5px;
+	margin-left:3px;
+}
 /****************************************
   Components
 *****************************************/
 
+
 header{
-	background-color:#FFA600;
-	font-weight:600;
+	font-weight:400;
 }
 
 a{
@@ -214,38 +244,47 @@ a{
 }
 
 header > a{
-	background-color:#FF0000;
+	font-weight:400;
+	text-decoration:none;
+	font-size:42pt;
+	font-family:Lobster;
 }
 
-header > div{
-	background-color: blue;
+input{
+	border:1px solid #81C4CF;
+	background:rgba(0, 138, 161, .1);
 }
 
 header button{
+	font-family:Open Sans;
+	font-weight:600;
     color: white;
-    font-size: 16pt;
+    font-size: 14pt;
+    border-radius:3px;
+    border:1px;
+    background-color: #EF6503;
 }
 
 nav{
-	background-color:#008100;
+	border-top:1px solid #DADADA;
+	border-bottom:1px solid #DADADA;
 }
 
 nav > a{
 	text-decoration:none;
-	text-transform:uppercase;
 }
 
 .hero{
+	background: -webkit-radial-gradient(circle, rgba(0, 139, 166, .5), rgba(0, 139, 166, 1) ), url('images/bg.jpg');
+	background-color: #2F2727;
+  	background-position: center;
+  	background-repeat: no-repeat;
 	color:#FFFFFF;
-	background-color: #00AABB;
 }
+
 
 .content{
-	background-color: #810082;
-}
-
-.new{
-	background-color:#84D4DD;
+	background-color: #D7E1E7;
 }
 
 .intro{
@@ -256,16 +295,47 @@ nav > a{
 	font-size:30pt;
 }
 
-.banner{
-	background-color:#FF00FF;
-}
-
 .steps{
-	background-color: #008100;
+	background-color: #D7E1E7;
 }
 
 .tile{
-	background-color: #00FF00;
+	color:#444444;
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 1px 1px #CCC3C3;
+}
+
+.tile:first-child{
+	border-top:3px solid #ED4F00;
+}
+
+.tile:first-child button{
+	border:2px solid #ED4F00;
+	background-color: #FFFFFF;
+	color:#E46526;
+	border-radius:4px;
+}
+
+.tile:nth-child(2){
+	border-top:3px solid #8CD133;
+}
+
+.tile:nth-child(2) button{
+	border:2px solid #8CD133;
+	background-color: #FFFFFF;
+	color:#92CA49;
+	border-radius:4px;
+}
+
+.tile:last-child{
+	border-top:3px solid #0091D3;
+}
+
+.tile:last-child button{
+	border:2px solid #0091D6;
+	background-color: #FFFFFF;
+	color:#44ACDE;
+	border-radius:4px;
 }
 
 .tile .title{
@@ -274,32 +344,38 @@ nav > a{
 
 .media{
 	background-color: white;
+	box-shadow: 1px 1px 1px 1px #CCC3C3;
 }
 
 aside{
-	background-color: #00FF00;
+	background-color: #FFFFFF;
 }
 
 .labels {
-	background-color: red;
+	background-color: #E8F3F9;
 }
 
 .labels .text{
-	background-color: yellow;
+	color:#444444;
+}
+
+.labels span{
+	font-size:16pt;
+	color:#2A91D6;
+	font-weight:400;
 }
 
 .profiles{
-	background-color: #0000FF;
+	background-color: #FFFFFF;
 }
 
-.profiles div {
-	background-color: yellow;
-}
-
-span{
-	font-weight:900;
-}
 
 .profiles span{
-	border-bottom:1px solid black;
+	color:#3D6923;
+	background-color: #8CD133;
+}
+
+.bottom{
+	color:#345A03;
+	background-color: #E3EFD5;
 }

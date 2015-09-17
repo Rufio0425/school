@@ -1,65 +1,76 @@
 <?php 
 
-    session_start();
+session_start();
 
-    function isuserLoggedin(){
-        return $_SESSION["isLoggedin"];
+include_once('myincludes.php');
+$username = "";
+$password = "";
+$msg = "";
+$msg2 = "";
 
-    }
+function isuserLoggedin(){
+    return $_SESSION["isLoggedin"];
 
-    $isuserLoggedin = isuserLoggedin();
+}
 
+$isuserLoggedin = isuserLoggedin();
 
-?>
+if(isset($_POST['username'])){
+    $_SESSION['user'] = $_POST['username'];
+}
 
-
-
-
-
-
-
-<!-- if(isset($_SESSION["username"]) && strlen($_SESSION["username"]) > 0) {
-    header("Location: profile.php");
-    exit();
-} else {
-    if($_SERVER["REQUEST_METHOD"] == "POST") {
-        if(isset($_POST["username"]) && isset($_POST["password"])) {
-            if(strlen($_POST["password"]) == 7) {
-                $_SESSION["username"] = $_POST["username"];
-                header("Location: profile.php");
-                exit();
-            } 
-        }
-    }
+if(isset($_POST['password'])){
+    $_SESSION['pass'] = $_POST['password'];
 }
 
 
- ?> -->
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    if($usernameValidator->isValid($_SESSION["user"])){
 
- <!DOCTYPE html>
- <html lang="en">
- <head>
+        if($passwordValidator->isValid($_SESSION["pass"])){
+            return header('Location: account.php');
+            exit();
+
+        }
+        else {
+            $msg2 = "Your password is invalid";
+        }
+    }
+    else {
+        $msg = "Your username is invalid";
+    }
+}
+
+ ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title>Document</title>
- </head>
- <body>
-    <?php
-    if($isuserLoggedin){
-    ?>
-    <h1>Welcome user</h1>
-    <a href="logout.php">Logout</a>
-    <?php  
-    } ?>
-    <form action="validate.php" method="POST">
-        USERNAME: <input type="text" name="username"><br>
-        PASSWORD: <input type="text" name="password"><br>
-        <button>Submit</button>
+    <title>Login</title>
+    <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Amatic+SC|Bangers|Fredericka+the+Great|Black+Ops+One' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="index.php" method="POST">
+
+        <div>
+            <label>Username:</label>
+            <input type="text" name="username">       
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input type="password" name="password">
+        </div>
+
+        <button>Login</button>
     </form>
- </body>
- </html>
 
-
-
-
-
-
+    <div class="errors">
+        <span><?= $msg ?></span>
+        <span><?= $msg2 ?></span>
+    </div>
+    
+</body>
+</html>

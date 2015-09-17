@@ -1,3 +1,134 @@
-span.error {
-    color: red;
+@keyframes example {
+    0%   {background-color: #00362B; left:0px; top:0px;}
+    25%  {background-color: #00362B; left:5%; top:0px;}
+    50%  {background-color: #00362B; left:0; top:0px;}
+    75%  {background-color: #00362B; left:5%; top:0px;}
+    100% {background-color: #00362B; left:0px; top:0px;}
 }
+
+
+body {
+	background-color: #00362B;
+	animation-name: example;
+    animation-duration: .5s;
+}
+
+form{
+	transform:translateX(522px);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: .5s;
+}
+
+label{
+	padding-left:21px;
+	color:#03b790;
+	font-size:20pt;
+	font-family:Fredericka the Great;
+}
+
+input{
+	font-size:20pt;
+	font-family:Amatic SC;
+	text-align:center;
+}
+
+button{
+	color:#58BFA9;
+	padding:5px;
+	margin-top:5px;
+	border:2px solid #58BFA9;
+	border-radius:5px;
+	font-size:16pt;
+	font-family:Fredericka the Great;
+	background-color:#00362B;
+	margin-left: 50px;
+}
+
+.errors{
+	color:#58BFA9;
+	font-size:50pt;
+	font-family:Bangers;
+	padding-left:25%;
+	padding-top:15%;
+
+}
+
+.logout{
+	color:#58BFA9;
+	text-decoration:none;
+}
+
+.logout:hover{
+	color:#AFD2CB;
+	font-weight:900;
+	font-size:50pt;
+}
+
+.title{
+	color:#58BFA9;
+	font-size:50pt;
+	font-family:Fredericka the Great;
+	text-align:center;
+	margin-top:20px;
+}
+
+.greet{
+	transform: translateX(-120px);
+	text-align:center;
+	font-family:Amatic SC;
+	font-size:35pt;
+	color:#58BFA9;
+	padding-top:100px;
+}
+
+.account{
+	padding-left:250px;
+}
+
+.redirect{
+	color:#58BFA9;
+	font-size:25pt;
+	font-family:Indie Flower;
+	margin-top:25%;
+	margin-left:35%;
+}
+
+.loader {
+	width:100%;
+	//height:200px;
+	height:100%;
+	background: #1ef0a0;
+	animation:4s load ease;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:-1;
+}
+
+@keyframes load {
+	0%   {width:0;}
+	100% {width:100%;}
+}
+
+.button {
+	transform: translateX(-43px);
+	font-family:Black Ops One;
+	padding:44px;
+	border:4px solid #fff;
+	color:#fff;
+	display:inline-block;
+	background: transparent;
+	border-radius:0.5em;
+	overflow:hidden;
+	position: relative;
+	font-size: 3em;
+	font-weight:200;
+	margin:1% 0;
+}
+
+
+
+
