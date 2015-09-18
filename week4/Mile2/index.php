@@ -6,42 +6,40 @@ include_once('myincludes.php');
 $username = "";
 $password = "";
 $msg = "";
-$msg2 = "";
 
-function isuserLoggedin(){
-    return $_SESSION["isLoggedin"];
-
+if(isset($_SESSION["isLoggedin"])){
+    if($_SESSION["isLoggedin"] == true){
+        header('Location: account.php');        
+    }
 }
 
-$isuserLoggedin = isuserLoggedin();
-
-if(isset($_POST['username'])){
-    $_SESSION['user'] = $_POST['username'];
-}
-
-if(isset($_POST['password'])){
-    $_SESSION['pass'] = $_POST['password'];
-}
-
+$usernameValidator = new UsernameValidator;
+$passwordValidator = new PasswordValidator;
 
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    if($usernameValidator->isValid($_SESSION["user"])){
-
-        if($passwordValidator->isValid($_SESSION["pass"])){
-            return header('Location: account.php');
-            exit();
-
+    if(isset($_POST['username'])){
+        $_SESSION['user'] = $_POST['username'];
+        if($usernameValidator->isValid($_SESSION["user"])){
+            if(isset($_POST['password'])){
+                $_SESSION['pass'] = $_POST['password'];
+                if($passwordValidator->isValid($_SESSION['pass'])){
+                    $_SESSION["isLoggedin"] = true;
+                    return header('Location: account.php');
+                    exit();
+                }
+                else {
+                    $msg = "Your password is invalid";
+                }
+            }
+        }else {
+            $msg = "Your username is invalid";
         }
-        else {
-            $msg2 = "Your password is invalid";
-        }
+    
     }
-    else {
-        $msg = "Your username is invalid";
-    }
+
 }
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -53,7 +51,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 </head>
 <body>
     <form action="index.php" method="POST">
-
         <div>
             <label>Username:</label>
             <input type="text" name="username">       
@@ -69,8 +66,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     <div class="errors">
         <span><?= $msg ?></span>
-        <span><?= $msg2 ?></span>
     </div>
-    
 </body>
 </html>

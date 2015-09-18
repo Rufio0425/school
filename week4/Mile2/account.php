@@ -5,18 +5,18 @@ session_start();
 
 $msg = "";
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+if(isset($_SESSION['user']) && strlen($_SESSION['user'])) {
+	$msg3 = "Hello " . $_SESSION["user"] . " you are being logged in";
+} else{
+	header('Location: index.php');
 }
-
-$msg3 = "Hello " . $_SESSION["user"] . " you are being logged in";
 
 ?>
 
 <link rel="stylesheet" href="style.css">
 <link href='https://fonts.googleapis.com/css?family=Indie+Flower|Amatic+SC|Bangers|Fredericka+the+Great|Black+Ops+One' rel='stylesheet' type='text/css'>
 
-<div class="title">Welcome to Forrest Hunter</div>
+<div class="title">Welcome to Safari Road</div>
 <!-- Elephant -->
 <div class="contenedor">
 <div class="elefantes">
@@ -50,7 +50,7 @@ $msg3 = "Hello " . $_SESSION["user"] . " you are being logged in";
 	</div>
 
 	<div class="button">
-		ACCESSING WEAPON INVENTORY
+		Acessing Safari Guide
 		<div class="loader">
 		</div>
 	</div>

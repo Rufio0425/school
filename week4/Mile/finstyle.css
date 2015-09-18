@@ -20,18 +20,12 @@ body{
   Layout
 *****************************************/
 body{
-
 	display:flex;
 	flex-direction:column;
 	margin:0;
 }
 
-forward{
-	height:100%;
-	width:100%;
-}
-
-main{
+.container{
 	width:60em;
 	margin-left:auto;
 	margin-right:auto;
@@ -233,9 +227,6 @@ span{
 /****************************************
   Components
 *****************************************/
-body{
-	font-weight:;
-}
 
 header{
 	font-weight:400;
