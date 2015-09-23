@@ -22,9 +22,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 }
 
-foreach($puppies as $value){
-	$msg .= "<li>" .$value. "<button class='remove'>X</button>" ."</li>";
-}
 
 ?>
 
@@ -33,27 +30,6 @@ foreach($puppies as $value){
 <head>
 	<meta charset="UTF-8">
 	<title>Pound</title>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-	
-	<script>
-		$(document).ready(function(){
-			$('.remove').click(function(){
-				$(this).closest('li').hide();
-
-				$.get('api.php', function(data){
-
-					console.dir(data);
-
-
-				});
-
-			});
-
-			$('.reset').click(function(){
-				$(this).closest('ul').hide();
-			})
-		});
-	</script>
 </head>
 <body>
 	<form action="puppy.php" method="POST">
@@ -63,13 +39,27 @@ foreach($puppies as $value){
 			<?= $error ?>
 		<button>Submit</button>
 
-
+		<ul>
+			 <?php foreach($puppies as $puppy){?>
+                <li class="puppy"><span><?= $puppy ?></span> <a href="#">Remove</a></li>
+             <?php } ?>
+		</ul>
 	</form>
-
-	<ul>
-		<?= $msg ?>
-		<button class="reset">Reset</button>
-	</ul>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script>
+       $(function(){
+           console.log("REady");
+           $(".puppy a").on("click", function(e){
+               var li = $(this).closest("li");
+               var puppyName = $("span", li).text();
+               
+               li.remove();
+               $.post("api.php", {puppyName: puppyName}, function(data){
+                   console.dir(data);
+               });
+           });
+       });
+   </script>
 
 </body>
 </html>
