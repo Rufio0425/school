@@ -8,7 +8,7 @@ $msg = "";
 if(isset($_SESSION['user']) && strlen($_SESSION['user'])) {
 	$msg3 = "Hello " . $_SESSION["user"] . " you are being logged in";
 } else{
-	header('Location: index.php');
+  header('Location: index.php');
 }
 
 ?>

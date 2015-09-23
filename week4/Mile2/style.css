@@ -48,6 +48,11 @@ button{
 	margin-left: 55px;
 }
 
+button:active{
+	color:#00362B;
+	background-color:#58BFA9;
+}
+
 .errors{
 	color:#58BFA9;
 	font-size:50pt;
