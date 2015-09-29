@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Laravel</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
+
+        <style>
+            html, body {
+                height: 100%;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
+
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
+
+            .title {
+                font-size: 96px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="title">New Race</div>
+                <form action="#" method="POST">
+                    {!! csrf_field() !!}
+
+                    <label>Name:
+                        <input type="text" name="raceName" placeholder="Race Name">
+                    </label>
+                    <br>
+                    <label>Distance:
+                        <input type="text" name="length" placeholder="Race Length">
+                    </label>
+                    <br>
+                    <label>Location:
+                        <input type="text" name="location" placeholder="Race Location">
+                    </label>
+                    <br>
+                    <label>Start Date:
+                        <input type="text" name="startDate" placeholder="Race Date">
+                    </label>
+                    <br>
+                    <button type="submit" name="save">Save</button>
+                    <a href="/races">Cancel</a>
+                </form>
+            </div>
+        </div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/races">Races</a>
+        </div>
+    </body>
+</html>
