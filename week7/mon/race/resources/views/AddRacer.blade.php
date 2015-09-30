@@ -38,11 +38,27 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Join The Races</div>
-                <a href="/">Home</a>
-                <a href="/races">Races</a>
-                <a href="/racers">Racers</a>
+                <div class="title">New Racer</div>
+                <form action="#" method="POST">
+                    {!! csrf_field() !!}
+
+                    <label>Name:
+                        <input type="text" name="name" placeholder="Racer Name">
+                    </label>
+                    <br>
+                    <label>Age:
+                        <input type="number" name="age" placeholder="Racer Age">
+                    </label>
+                    <br>
+                    <button type="submit" name="save">Save</button>
+                    <a href="/racers">Cancel</a>
+                </form>
             </div>
+        </div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/races">Races</a>
+            <a href="/racers">Racers</a>
         </div>
     </body>
 </html>

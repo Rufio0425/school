@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use PDO;
+use Request;
 
 class RaceController extends Controller{
 	public function getRaces(){
@@ -46,38 +47,38 @@ class RaceController extends Controller{
 			}
 	}
 
-	public function editRaceView(){
-		return view('editor');
+	public function editRace($raceID){
+		try {
+			$db = new PDO('mysql:host=localhost;dbname=race;charset=utf8', 'root');
+			$statement = $db->prepare('select * from races where raceID ='.$raceID);
+			$statement->execute();
+			$race = $statement->fetch();
+			// print_r($racer);
+
+			return view('editRace',['race' => $race]);
+
+		} catch (PDOException $e) {
+			echo "you did something wrong {$e->getMessage()}";
+		}
 	}
 
-	public function createNewRace(){
-		$raceName = "";
-		$length = 0;
-		$location = "";
+	public function updateRace($raceID){
+		$raceName = Request::input('raceName');
 
-		if(isset($_POST['raceName'])){
-			$raceName = $_POST["raceName"];
-		}
+		$length = Request::input('length');
 
-		if(isset($_POST['length'])){
-			$length = $_POST["length"];
-		}
+		$location = Request::input('location');
 
-		if(isset($_POST['location'])){
-			$location = $_POST["location"];
-		}
+		$startDate = Request::input('startDate');
 
-		if(isset($_POST['startDate'])){
-			$startDate = $_POST["startDate"];
-		}
-
+		
 		$db = new PDO('mysql:host=localhost;dbname=race;charset=utf8', 'root');
-		$sql = "insert into races (raceName, length, location, startDate) values(:raceName, :length, :location, :startDate)";
+		$sql = "update races set raceName = :raceName, length = :length, location = :location, startDate = :startDate where raceID = :raceID";
 		$statement = $db->prepare($sql);
-		$statement->execute(["raceName"=>$raceName, "length"=>$length, "location"=>$location, "startDate"=>$startDate]);
+		$statement->execute([":raceName"=>$raceName, ":length"=>$length, ":location"=>$location, ":startDate"=>$startDate, ":raceID"=>$raceID]);
 
-		echo "Inserted one record";
-		return redirect('/races');
+		echo "Updated racer";
+		return redirect("/races/$raceID");
 
 	}
 

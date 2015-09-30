@@ -42,7 +42,9 @@
                 <div>{{gmdate('r', $race['startDate'])}}</div>
                 <div>{{$race['location']}}</div>
                 <div>{{$race['length']}}</div>
+                <div><form action="/races/{{$raceID}}/editor"><button>Edit Race</button></form></div>
                 <div><a href="/races/{{$raceID}}/racers">View Racers</a></div>
+                <div><a href="/races">Go Back</a></div>
             </div>
         </div>
         <div>

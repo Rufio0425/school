@@ -38,11 +38,27 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Join The Races</div>
-                <a href="/">Home</a>
-                <a href="/races">Races</a>
-                <a href="/racers">Racers</a>
+                <div class="title">Edit Racer</div>
+                <form action="" method="POST">
+                    {!! csrf_field() !!}
+
+                    <label>Name:
+                        <input type="text" name="name" value="{{$racer['name']}}">
+                    </label>
+                    <br>
+                    <label>Age:
+                        <input type="number" name="age" value="{{$racer['age']}}">
+                    </label>
+                    <br>
+                    <button type="submit" name="save">Update</button>
+                    <a href="/racers">Cancel</a>
+                </form>
             </div>
+        </div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/races">Races</a>
+            <a href="/racers">Racers</a>
         </div>
     </body>
 </html>

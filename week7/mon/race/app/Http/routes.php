@@ -21,10 +21,22 @@ Route::get('/races/{id}', "raceController@getRaceDetails");
 
 Route::get('/races/{id}/racers', "raceController@getRacer");
 
-Route::get('/editor', "raceController@editRaceView");
+Route::get('/races/{id}/editor', "raceController@editRace");
 
-Route::post('/editor', "raceController@createNewRace");
+Route::post('/races/{id}/editor', "raceController@updateRace");
 
 Route::post('/api/removeRace', "raceController@removeRace");
 
+Route::get('/racers', "RacerController@getRacers");
 
+Route::get('/racers/{id}', "RacerController@getRacerDetails");
+
+Route::post('/racers/{id}/delete', "RacerController@deleteRacer");
+
+Route::get('/AddRacer', "RacerController@addRacer");
+
+Route::post('/AddRacer', "RacerController@createRacer");
+
+Route::get('/racers/{id}/edit', "RacerController@editRacer");
+
+Route::post('/racers/{id}/edit', "RacerController@updateRacer");

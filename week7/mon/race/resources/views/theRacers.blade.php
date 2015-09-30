@@ -38,11 +38,17 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Join The Races</div>
-                <a href="/">Home</a>
-                <a href="/races">Races</a>
-                <a href="/racers">Racers</a>
+                <div class="title">Racer Details</div>
+                <div class="title">{{$racer['name']}}</div>
+                <div class="title">{{$racer['age']}}</div>
+                <div><a href="/racers/{{$racer['racerID']}}/edit">Edit Racer</a></div>
+                <div><a href="/racers">Go Back</a></div>
             </div>
         </div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/races">Races</a>
+            <a href="/racers">Racers</a>
+        <div>
     </body>
 </html>

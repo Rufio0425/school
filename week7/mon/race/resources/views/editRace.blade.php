@@ -33,33 +33,38 @@
             .title {
                 font-size: 96px;
             }
-
-             li{
-                list-style-type:none;
-            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Racers</div>
-            </div>
-            <div>
-                <ul>
-                   @foreach($racers as $racer)
-                    <li><a href="/racers/{{$racer['racerID']}}">{{ $racer['name'] }}</a>
-                    <form action="/racers/{{$racer['racerID']}}/delete" method="POST">
-                    {{ csrf_field() }}
-                    <button>X</button></form></li>
-                   @endforeach
-                </ul>
+                <div class="title">Edit Race</div>
+                <form action="" method="POST">
+                    {!! csrf_field() !!}
 
-                <a href="/AddRacer"><button>Add Racer</button></a>
+                    <label>Race Name:
+                        <input type="text" name="raceName" value="{{$race['raceName']}}">
+                    </label>
+                    <br>
+                    <label>Start Date:
+                        <input type="text" name="startDate" value="{{$race['startDate']}}">
+                    </label>
+                    <label>Location:
+                        <input type="text" name="location" value="{{$race['location']}}">
+                    </label>
+                    <label>Length:
+                        <input type="text" name="length" value="{{$race['length']}}">
+                    </label>
+                    <br>
+                    <button type="submit" name="save">Update</button>
+                    <a href="/races">Cancel</a>
+                </form>
             </div>
         </div>
         <div>
             <a href="/">Home</a>
             <a href="/races">Races</a>
+            <a href="/racers">Racers</a>
         </div>
     </body>
 </html>

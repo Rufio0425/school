@@ -73,6 +73,7 @@
             </div>
         </div>
         <a href="/">Home</a>
+        <a href="/racers">Racers</a>
 
     </body>
 </html>
