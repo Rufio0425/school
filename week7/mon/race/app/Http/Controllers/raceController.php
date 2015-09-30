@@ -55,7 +55,7 @@ class RaceController extends Controller{
 			$race = $statement->fetch();
 			// print_r($racer);
 
-			return view('editRace',['race' => $race]);
+			return view('editor',['race' => $race]);
 
 		} catch (PDOException $e) {
 			echo "you did something wrong {$e->getMessage()}";

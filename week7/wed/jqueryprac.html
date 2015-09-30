@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>
+	$(function(){
+		$('p').click(function(){
+			console.log(this.tagName + ' was clicked and');
+		});
+
+		$('body').on('click', 'p', function(){
+			console.log('this is our superduper click handler');
+		});
+
+		$('input').blur(function(){
+			console.log('input lost focus');
+		});
+
+		$('input[name="bar"]').focus(function(){
+			$('div').append('<p class="newp">this is a new</p>');
+		});
+
+	});
+
+
+	</script>
+</head>
+<body>
+	<h1>jQuery Funland</h1>
+	<div>
+		<p>foo</p>
+		<p class="special bar">bar</p>
+		<p>frog</p>
+		<p class="special lion">lion</p>
+		<p>dog</p>
+		<input type="text" name="foo">
+		<input type="text" name="bar">
+	</div>
+</body>
+</html>
