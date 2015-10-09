@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery Fun!</title>
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script>
+		$(function(){
+			console.log('Ready');
+
+			$('body').on('click', function(){
+				console.log("I'm clicked");
+			});
+
+			$('li').on('click', function(e){
+				console.log("I'm clacked");
+				e.preventDefault();
+				return false;
+			});
+			$('input').on("keypress", function(e){
+				if(e.keyCode ==101){
+					console.log("It's an E");
+					return false;
+				}
+			});
+		});
+
+
+	</script>
+</head>
+<body>
+	<h1>jQuery Fun</h1>
+	<input type="textbox">
+	<ul>
+		<li class="special">Item 1</li>
+		<li>Item 2</li>
+		<li>Item 3</li>
+		<li id="c1">Item 4</li>
+	</ul>
+</body>
+</html>
