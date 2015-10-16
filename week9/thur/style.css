@@ -1,0 +1,29 @@
+.page{
+	background-color: #aaa;
+	padding: 10px;
+}
+
+aside{
+	background-color: blue;
+	min-height: 200px;
+}
+
+main{
+	background-color: green;
+	min-height:100px;
+}
+
+@media screen and (min-width: 600px){
+
+	.page{
+		display:flex;
+	}
+
+	aside{
+		width:200px;
+	}
+
+	main{
+		flex:1;
+	}
+}

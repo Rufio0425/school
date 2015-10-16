@@ -1,0 +1,4 @@
+How to download npm or bower 
+
+bower install [project] --save
+npm install [project] --save
