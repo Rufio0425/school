@@ -1,0 +1,18 @@
+{
+  "name": "maps",
+  "homepage": "https://github.com/Rufio0425/school",
+  "authors": [
+    "Sean <seanpeter.aguirre@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
