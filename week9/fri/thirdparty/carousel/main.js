@@ -1,3 +1,0 @@
-$(function(){
-	$('.slick').slick();
-});

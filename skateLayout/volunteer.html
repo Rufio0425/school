@@ -196,9 +196,68 @@
                 background-size:cover;
                 display:inline-block;
             }
+
+            .lightbox-tint{
+                position:absolute;
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                background-color: rgba(0,0,0,0.4);
+                display:none;
+            }
+
+            .lightbox {
+                width: 500px;
+                height: 300px;
+                background-color: green;
+                position:fixed;
+                left:50%;
+                top:50%;
+                display:none;
+
+                transform: translate(-50%, -50%);
+            }
+
+            .lightbox-tint.on{
+                position:fixed;
+                display:block;
+            }
+
+            .lightbox-tint.on .lightbox{
+                position:fixed;
+                display:block;
+            }
+
+            .lightbox .exit{
+                position:absolute;
+                top: 0;
+                right: -50px;
+            }
+
+            .bottom-join{
+                text-align:center;
+            }
         </style>
     </head>
     <body>
+        <div class="lightbox-tint">
+            <div class="lightbox">
+                <form action="">
+                    <label for="">First Name
+                        <input type="text">
+                    </label><br>
+                    <label for="">Last Name
+                        <input type="text">
+                    </label><br>
+                    <label for="">Email
+                        <input type="text">
+                    </label><br>
+                    <button>Submit</button>
+                </form>
+                <button class="exit">Exit</button>
+            </div>
+        </div>
         <header>
             <div class="logo"><a href="">Skate After School</a></div>
             <div class="nav">
@@ -211,6 +270,7 @@
                 <a href="">Volunteer Application</a>
                 <a href="">Donate</a>
                 <a href="">Store</a>
+                <button class="sign-up">Sign Up</button>
             </div>
         </header>
         <div class="panel hero">
@@ -220,8 +280,8 @@
                 </div>
                 <div class="vom">
                     <div class="vom_title"><span>Volunteer of The Month</span></div>
-                    <div class="vom_pic" style="background-image: url('http://assets.woodwardtv.com/media/thumbs/athlete/headshot/96157931_RYAN_LAY_HEADSHOT_.jpg.360x360_q85_crop-scale_upscale.jpg')"></div>
-                    <div class="vol_name"><a href="">Ryan Lay</a></div>
+                    <div class="vom_pic" style="background-image: url('https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAI-AAAAJDMzYzE3MWVkLTAzODUtNDcxNC04YTg0LWNlZmZmNWQ4NmNiOQ.jpg')"></div>
+                    <div class="vol_name"><a href="">Josh Eberhard</a></div>
                 </div>
             </div>
         </div>
@@ -264,5 +324,22 @@
                 </div>
             </div>
         </div>
+        <script>
+            $(function(){
+                $('button').click( function(){
+                    $('.lightbox-tint').toggleClass('on');
+                });
+
+                $('.lightbox-tint').click( function(){
+                    // Close lightbox and tint div
+                    $('')
+                });
+
+                $('.lightbox').click( function(e){
+                    console.log("hello lalala");
+                    e.stopPropagation();
+                });
+            });
+        </script>
     </body>
 </html>

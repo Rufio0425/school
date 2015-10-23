@@ -3,9 +3,29 @@
 <form method="POST" action="/auth/login">
     {!! csrf_field() !!}
 
+
+    @if( count($errors) > 0)
+    {{ print_r( $errors->getBags()['default']->get('email') )}}
+    <div>
+        <h2>Form Errors:</h2>
+        <ul>
+        @foreach($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div>
         Email
         <input type="email" name="email" value="{{ old('email') }}">
+        @if( count($errors) > 0)
+            @if( count($errors->getBags()['default']->get('email')) > 0)
+            <span>
+                {{$errors->getBags()['default']->get('email')[0]}}
+            </span>
+            @endif
+        @endif
     </div>
 
     <div>
